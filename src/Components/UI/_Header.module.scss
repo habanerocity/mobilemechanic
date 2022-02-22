@@ -1,0 +1,35 @@
+@import "../../Sass/mixins.scss";
+
+.phone__icon {
+  margin-right: 5px;
+  height: 2rem;
+  width: 2rem;
+}
+
+.btn{
+  margin-top: 0.4rem;
+
+  &__container {
+    @include flex-container;
+  }
+}
+
+@media screen and (min-width: 2560px) {
+  .btn{
+   margin-top: 0.5rem;
+   height: 5rem;
+   width: 115rem;
+  }
+
+  .phone__icon {
+    height: 3rem;
+    width: 3rem;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .btn {
+    
+  }
+}
+

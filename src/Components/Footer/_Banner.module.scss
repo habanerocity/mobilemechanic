@@ -1,0 +1,150 @@
+@import '../../Sass/variables';
+@import '../../Sass/mixins';
+
+.banner {
+    @include flex-container-col;
+    justify-content: center;
+    padding: 3rem 0;
+}
+
+.btn {
+    background-color: $color-secondary-1;
+    color: $color-black;
+    font-size: 2rem;
+    padding: 5px 4rem;
+    position: relative;
+    display: inline-block;
+    border-radius: 3rem;
+    text-decoration: none;
+    letter-spacing: 0.025em;
+    font-weight: 600;
+    cursor: pointer;
+    min-width: 8.8rem;
+    width: 30rem;
+    border: none;
+    margin-top: 0.75rem;
+
+    // &__container {
+    //     padding-bottom: 3rem;
+    // }
+
+    &:hover {
+        background-color: $color-secondary-2;
+    }
+}
+
+.details {
+    padding: 2rem 0;
+    color: $color-white-1;
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 600;
+    font-family: $body-font;
+}
+
+.line {
+    color: $color-white-1;
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 600;
+    font-family: $body-font;
+}
+
+.marker {
+    height: 2rem!important;
+    width: 2rem;
+}
+
+.quote {
+    color: $color-white-1;
+    text-align: center;
+    font-size: 4rem;
+    margin-bottom: 3.5rem;
+    font-weight: 700;
+    font-family: $header-font;
+}
+
+.wrapper {
+    height: auto;
+    width: 100%;
+    background-color: $color-medium-blue;
+}
+
+////MEDIA QUERIES BASED ON WIDTH ///////////////////////
+@media screen and (min-width: 1800px) {
+    .line {
+        font-size: 5.5rem;
+    }
+
+    .details {
+        font-size: 5.5rem;
+    }
+
+    .quote {
+        font-size: 8rem;
+    }
+
+    .btn {
+    height: 8rem;
+    width: 61rem;
+    font-size: 4rem;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .quote {
+        margin-bottom: 3rem;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .btn {
+        font-size: 1.5rem;
+        padding: 4px 4rem;
+        width: 27.5rem;
+    }
+
+    .line {
+        font-size: 1.7rem;
+    }
+
+    .details {
+        font-size: 1.7rem;
+    }
+
+    .quote {
+        font-size: 4rem;
+        margin-bottom: 2rem;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .line {
+        font-size: 1.4rem;
+    }
+
+    .details {
+        font-size: 1.4rem;
+        padding: 1rem 0;
+    }
+
+    .quote {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .btn {
+    font-size: 1.5rem;
+    padding: 2px 4rem;
+    width: 21rem;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .btn {
+        font-size: 1.5rem;
+        padding: 2px 4rem;
+        width: 21rem;
+        }
+}
+

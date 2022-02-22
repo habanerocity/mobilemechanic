@@ -1,0 +1,237 @@
+@import "../../Sass/_mixins.scss";
+@import "../../Sass/_variables.scss";
+
+.hero {
+  height: 93.25vh;
+  max-width: 100%;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("../../Images/hero.webp");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+
+  &__header {
+    @include position-absolutely;
+  }
+}
+
+.header {
+  color: $color-white-1;
+  font-family: $header-font;
+  font-size: 5rem;
+  
+}
+
+.subtext {
+  text-align: center;
+  color: $color-white-1;
+  font-size: 2rem;
+  width: 100%;
+  font-weight: 100;
+}
+
+////MEDIA QUERIES BASED ON WIDTH ////////
+
+@media screen and (max-width: 2400px) {
+  .header {
+    font-size: 10rem ;
+  }
+}
+
+@media screen and (max-width: 1900px) {
+  .header {
+    font-size: 8rem ;
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  .header {
+    font-size: 5rem ;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .header {
+    font-size: 5rem ;
+  }
+}
+
+@media screen and (min-width: 2560px) {
+  .header {
+    width: 100%;
+    font-size: 6rem;
+  }
+}
+
+@media screen and (min-width: 700px) and (max-width: 800px){
+  .header {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .header {
+    font-size: 3rem;
+  }
+
+  .subtext {
+    font-size: 1.5rem;
+  }
+}
+
+
+@media screen and (max-width: 400px) {
+  .header {
+    font-size: 2.5rem;
+  }
+
+  .subtext {
+    font-size: 1.2rem;
+  }
+}
+
+////MEDIA QUERIES BASED ON HEIGHT ////////
+// @media screen and (width: 1440px) and (height: 900px) {
+//   .hero {
+//     height: 77.5vh;
+//   }
+// }
+
+// @media screen and (width: 1280px) and (height: 950px) {
+//   .hero {
+//     height: 73.5vh;
+//   }
+// }
+
+// @media screen and (width: 1280px) and (height: 800px) {
+//   .hero {
+//     height: 87.5vh;
+//   }
+// }
+// @media screen and (width: 1180px) and (height: 820px) {
+//   .hero {
+//     height: 85.5vh;
+//   }
+// }
+
+// @media screen and (width: 1024px) and (height: 1366px) {
+//   .hero {
+//     height: 51vh;
+//   }
+// }
+
+// @media screen and (width: 1366px) and (height: 1024px) {
+//   .hero {
+//     height: 68vh;
+//   }
+// }
+
+// @media screen and (width: 834px) and (height: 1194px) {
+//   .hero {
+//     height: 58.5vh;
+//   }
+// }
+
+// @media screen and (width: 1194px) and (height: 834px) {
+//   .hero {
+//     height: 83.5vh;
+//   }
+// }
+
+// @media screen and (width: 820px) and (height: 1180px){
+//   .hero {
+//     height: 59.5vh;
+//   }
+// }
+
+// @media screen and (width: 800px) and (height: 1280px) {
+//   .hero {
+//     height: 54.5vh;
+//   }
+// }
+
+// @media screen and (width: 810px) and (height: 1080px) {
+//   .hero {
+//     height: 65vh;
+//   }
+// }
+
+// @media screen and (width: 1080px) and (height: 810px) {
+//   .hero {
+//     height: 86vh;
+//   }
+// }
+
+// @media screen and (width: 768px) and (height: 1024px) {
+//   .hero {
+//     height: 68.5vh;
+//   }
+// }
+
+// @media screen and (width: 600px) and (height: 960px) {
+//   .hero {
+//     height: 73vh;
+//   }
+// }
+
+// @media screen and (width: 428px) and (height: 926px) {
+//   .hero {
+//     height: 76vh;
+//   }
+// }
+
+// @media screen and (width: 412px) and (height: 915px) {
+//   .hero {
+//     height: 77vh;
+//   }
+// }
+
+// @media screen and (width: 412px) and (height: 883px) {
+//   .hero {
+//     height: 79.5vh;
+//   }
+// }
+
+// @media screen and (width: 411px) and (height: 823px){
+//   .hero {
+//     height: 84.5vh;
+//   }
+// }
+
+// @media screen and (width: 360px) and (height: 800px) {
+//   .hero {
+//     height: 88vh;
+//   }
+// }
+
+// @media screen and (width:384px) and (height: 854px) {
+//   .hero {
+//     height: 82vh;
+//   }
+// }
+
+// @media screen and (width:414px) and (height: 896px){
+//   .hero {
+//     height: 78.5vh;
+//   }
+// }
+
+// @media screen and (width:393px) and (height: 851px){
+//   .hero {
+//     height: 82.5vh;
+//   }
+// }
+
+// @media screen and (width:390px) and (height: 844px){
+//   .hero {
+//     height: 83.5vh;
+//   }
+// }
+
+// @media screen and (width:375px) and (height: 812px) {
+//   .hero {
+//     height: 86.5vh;
+//   }
+// }
+

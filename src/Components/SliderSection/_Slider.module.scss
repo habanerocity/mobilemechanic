@@ -1,0 +1,262 @@
+@import '../../Sass/mixins';
+@import '../../Sass/variables';
+
+.arrow {
+    position: absolute;
+    top: 50%;
+    height: 3rem;
+    color: $color-main;
+    z-index: 2;
+    cursor: pointer;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+
+    &__left{
+        left: -5rem;
+    }
+    
+    &__right{
+        right: -5rem;
+    }
+}
+
+.btn__container {
+    @include flex-container;
+}
+
+.header {
+    font-family: $header-font;
+}
+
+.holder {
+    display: inline-block;
+}
+
+.slide {
+    opacity: 0;
+    transition-duration: 1s ease;
+
+    &__active {
+        opacity: 1;
+        transition-duration: 1s;
+        transform:scale(1.08);
+    }
+}
+
+.slider {
+    position: relative;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.person {
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.quote {
+    margin-bottom: $margin-sm;
+
+    &>img {
+        height: 7rem;
+        width: 7rem;
+    }
+}
+
+.review__content {
+    @include flex-container;
+    flex-direction: column;
+    height: auto;
+}
+
+.review__slides {
+    @include flex-container;
+    flex-direction: row;
+}
+
+.testemonial {
+    margin: 2rem 0;
+    font-size: $font-size-body;
+}
+
+.wrapper {
+    background-color: $color-white-1;
+}
+
+//////MEDIA QUERIES BASED ON WIDTH //////////////////////////////////
+
+@media only screen and (min-width: 2560px) {
+    .arrow__left{
+       height: 7rem;
+       transform: translateX(-14rem);
+    }
+
+    .arrow__right{
+        height: 7rem;
+        transform: translateX(14rem);
+    }
+    
+    .testemonial {
+        font-size: 3rem;
+    }
+}
+
+@media only screen and (min-width: 1450px) {
+.testemonial {
+    font-size: 2.5rem;
+}
+}
+
+@media only screen and (max-width: 1440px) {
+    .arrow__left{
+        left: 0;
+    }
+
+    .arrow__right{
+        right: 0;
+    }
+
+    // .slider {
+    //     height: auto;
+    // }
+
+    .testemonial {
+        font-size: 1.5rem;
+    }
+}
+
+@media only screen and (max-width: 1000px){
+    .testemonial {
+        font-size: 1.4rem;
+        margin: 1rem 0;
+    }
+
+    .quote {
+        &>img {
+            height: 5rem;
+            width: 5rem;
+        }
+    }
+
+    .slider {
+        height: auto;
+    }
+
+    .wrapper {
+        padding: 8rem 0;
+    }
+}
+
+@media only screen and (max-width: 767px){
+    .arrow__left{
+        left: 0;
+    }
+
+    .arrow__right{
+        right: 0;
+    }
+
+    .arrow {
+        height: 2rem;
+    }
+
+    .slider {
+        height: auto;
+    }
+
+    .testemonial {
+        font-size: $font-size-body-sm;
+    }
+
+    .wrapper {
+        padding: 6rem 0;
+    }
+}
+@media only screen and (max-width: 600px) {
+    .header {
+        max-width: 80%;
+    }
+
+    .quote {
+        &>img {
+            height: 4rem;
+            width: 4rem;
+        }
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .testemonial {
+        font-size: $font-size-body-sm;
+    }
+
+    .arrow__left{
+        top: 58%;
+        left: 6px;
+        height: 2rem;
+    }
+
+    .arrow__right{
+        top: 58%;
+        right: 6px;
+        height: 2rem;
+    }
+}
+
+@media only screen and (max-width: 400px){
+
+    .arrow__left{
+        top: 58%;
+        left: 6px;
+        height: 2rem;
+    }
+
+    .arrow__right{
+        top: 58%;
+        right: 6px;
+        height: 2rem;
+    }
+
+    .testemonial {
+        font-size: 1.4rem;
+    }
+
+    .slider {
+        height: auto;
+    }
+
+    .review__content {
+        height: auto;
+    }
+}
+
+@media only screen and (max-width: 350px){
+    .review__content {
+        height: auto;
+        padding-top:2rem;
+    }
+
+    .testemonial {
+        font-size: 1.3rem;
+    }
+}
+
+@media only screen and (max-width: 300px) {
+    .testemonial {
+        font-size: 1.2rem;
+        width: 80%;
+    }
+}
+
+//////MEDIA QUERIES BASED ON HEIGHT //////////////////////////////////
+
+@media only screen and (max-height: 300px) {
+    .wrapper {
+        padding: 8rem 0;;
+    }
+}

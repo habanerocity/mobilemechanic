@@ -1,0 +1,95 @@
+@import '../../Sass/mixins';
+@import '../../Sass/variables';
+
+.content {
+    @include flex-container;
+
+    & > li {
+        padding: 0 2rem;
+        list-style-type: none;
+        font-size: 1.5rem;
+    }
+}
+
+.copyright {
+    width: 100%;
+    font-size: 1.3rem;
+}
+
+.flex__container {
+    @include flex-container-col;
+}
+
+.footer {
+    @include flex-container-col; 
+    padding: $padding-section;
+}
+
+.logo {
+    height:4rem;
+    width:4rem;
+    margin: $margin-sm 0;
+}
+
+.wrapper {
+    background-color: $color-white-1;
+}
+
+///////MEDIA QUERIES//////////////////////
+@media screen and (min-width: 2560px){
+    .content {
+        @include flex-container;
+    
+        & > li {
+            font-size: 2.5rem;
+        }
+    
+    }
+
+    .copyright {
+        font-size: 2.3rem;
+    }
+
+    .logo {
+        height: 11rem;
+        width: 11rem;
+        margin: $margin-sm 0;
+    }
+}
+
+@media screen and (max-width: 1200px){
+    .footer {
+        padding: $padding-section-md;
+    }
+}
+
+@media screen and (max-width: 767px){
+    .footer {
+        padding: $padding-section-sm;
+    }
+}
+
+@media screen and (max-width: 500px) {
+
+    .footer {
+        padding: $padding-section-xs;
+    }
+
+    .content {
+        & > li {
+            padding: 0 1rem;
+             font-size: 1rem;
+        }
+    }
+
+    .copyright {
+        text-align: center;
+        font-size: 7.5px;
+    }
+    
+    .logo {
+        height: 4rem;
+        margin: 1rem 0;
+    }
+  
+}

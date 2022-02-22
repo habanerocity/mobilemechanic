@@ -1,0 +1,255 @@
+@import '../../../Sass/mixins';
+@import '../../../Sass/variables';
+
+.closeBtn__container {
+    @include flex-container;
+    justify-content: flex-end;
+    transform: translate(-1rem, 1rem);
+    cursor: pointer;
+}
+
+.close {
+    height: 2rem;
+}
+
+.contact {
+    &__form {
+        background-color: $color-gray;
+        color: $color-white-1;
+        border-radius: 0 6px 6px 0;
+        height: 53rem;
+    }
+
+    &__btn {
+        width: 36.5rem;  
+        margin-top: 0 !important; 
+    }
+}
+
+.flex__container {
+    @include flex-container-col;
+    justify-content: space-around;
+    padding: 10rem;
+
+    & > label {
+        transform: translateX(-3.3rem);
+        -webkit-transform: translateX(-3.3rem);
+        -moz-transform: translateX(-4.3rem);
+    }
+}
+
+footer {
+    @include flex-container;  
+}
+
+.inp {
+    line-height: 2rem;
+    border: none;
+    background-color: transparent;
+    border-bottom: $border-line;
+    padding: .75rem;
+ 
+    &ut__container {
+        @include flex-container;
+        margin: 1.5rem 0;
+         
+        & > * {
+            margin-bottom: 5px;
+             height: 2rem;
+             width: 20rem;
+             font-size: 1.3rem;
+             outline: none;
+        }
+    }
+
+    &ut__error{
+        line-height: 2rem;
+        border: none;
+        background-color: transparent;
+        border-bottom: 1px solid #ff160c;
+        padding: .75rem;
+        color:#ff160c;
+    }
+    
+    &ut__success {
+        line-height: 2rem;
+        border: none;
+        background-color: transparent;
+        border-bottom: 1px solid #32cd32;
+        padding: .75rem;
+    }
+}
+
+label {
+    display: block;
+    color: $color-black;
+    text-align: left;
+    transform: translateX(2.2rem);
+}
+
+.message {
+    width: 36.5rem;
+    background-color: $color-gray-2;
+    margin-bottom: 4px;
+}
+
+textarea {
+    border: none;
+    border-bottom: $border-line;
+    resize: none;
+    font-size: 1.5rem;
+}
+
+///////MEDIA QUERIES BY WIDTH ///////////
+
+@media screen and (min-width: 2560px){
+    .contact__btn {
+        width: 45rem;
+    }
+
+    footer {
+        transform: translateY(17rem);
+    }
+
+    h4 {
+        font-size: 2.5rem!important;
+        transform: translateX(2.1rem);
+    }
+
+    .input__container{
+        transform: translateY(7rem);
+        justify-content: space-around!important;
+    }
+
+    .message {
+        width: 45rem;
+        transform: translateY(15rem);
+        &Label {
+            transform: translate(2rem, 15rem);
+        }
+    }
+
+    textarea {
+        transform: translateY(15rem);
+    }
+
+    .contact__form {
+        height: 73rem;
+        width: 53rem;
+    }
+}
+
+@media screen and (max-width: 1200px){
+    .modal__btn {
+        padding: 9px 4rem !important;
+        transform: translateY(17rem);
+    }
+    }
+
+@media screen and (max-width: 999px) {
+    .contact__form{
+        border-radius: 6px;
+    }
+}
+
+@media screen and (max-width: 850px){
+    .modal__branding{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .contact__btn {
+        width: 27rem;
+        margin-top: 1rem!important;
+    }
+
+    .contact__form {
+        width: 30rem;
+    }
+
+    .flex__container{
+        transform: translateX(2rem);
+    }
+
+    input {
+        width: 10rem;
+        font-size: 1rem;
+
+        &__container{
+            align-items: flex-start;
+            transform: translate(2rem, 2rem);
+        }
+    }
+    #input__containerOne {
+        align-items: flex-start;
+    }
+
+    #input__containerTwo {
+        align-items: flex-end;
+    }
+
+    #labelOne {
+        transform: translateX(-0.5rem);
+    }
+
+    label {
+        -webkit-transform: translateX(0.7rem);
+        transform: translateX(0.7rem);
+    }
+
+    #labelTwo {
+        transform: translateX(-1.7rem);
+    }
+
+    .message {
+        width: 27rem;
+        height: 16rem;
+
+        &__box {
+            margin-top: 4rem;
+        }
+
+        &Label {
+            transform: translateX(1.8rem);
+        }
+    }
+
+    textarea {
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .modal__btn {
+        margin:.8rem;
+        height: 2.5rem;
+        padding-bottom: 2.5rem;
+    }
+}
+
+@media screen and (max-width: 300px) {
+    .contact__btn {
+        width: 25rem;
+    }
+
+    .contact__form {
+        width: 26rem;
+    }
+
+    .contactInfo {
+        transform: translateX(3rem);
+    }
+
+    .message {
+        width: 25rem;
+    }
+
+    .messageLabel {
+        transform: translateX(1.2rem);
+    }
+
+    .labelOne {
+        transform: translateX(-1.1rem);
+    }
+}

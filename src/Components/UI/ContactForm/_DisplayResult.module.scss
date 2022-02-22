@@ -1,0 +1,134 @@
+@import '../../../Sass/mixins';
+@import '../../../Sass/variables';
+
+.flex__container {
+    @include flex-container-col;
+    justify-content: center;
+    align-items: center;
+    text-align:center;
+    font-size: 2rem;
+    font-weight: bolder;
+    width: 100%;
+    border-radius: 6px;
+    margin-bottom: 2rem;
+    transform: translateY(6rem);
+}
+
+.success {
+    @include position-absolutely;
+    background-color: $color-gray;
+    color: $color-black;
+    height: 30rem;
+    width: 40rem;
+    z-index: 30000;
+    border-radius: 6px;
+}
+
+.backdrop {
+    position: fixed; 
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 3000;
+}
+
+.closeBtn__container {
+    transform: translate(37rem, 1rem);
+    cursor: pointer;
+    z-index: 30000000000;
+    height: 2rem;
+    width: 2rem;
+    color: $color-black;
+}
+
+/////BUTTON STYLES/////////
+
+.btn {
+    border: none;
+    display: block;
+    position: relative;
+    padding: 0.7em 2.4em;
+    font-size: 18px;
+    background: transparent;
+    cursor: pointer;
+    user-select: none;
+    overflow: hidden;
+    color: $color-medium-blue;
+    z-index: 30001;
+    font-family: inherit;
+    font-weight: 500;
+    margin-top: 2rem;
+   }
+
+   .btn span {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    z-index: -1;
+    border: 4px solid $color-medium-blue;
+   }
+
+   .btn span::before {
+     content: "";
+     display: block;
+     position: absolute;
+     width: 8%;
+     height: 500%;
+     background: var(--lightgray);
+     top: 50%;
+     left: 50%;
+     transform: translate(-50%, -50%) rotate(-60deg);
+     transition: all .8s;
+     z-index: 300000;
+    }
+
+    .btn:hover span::before {
+         transform: translate(-50%, -50%) rotate(-90deg);
+         width: 100%;
+         background: $color-medium-blue;
+         
+    }
+
+    .btn:hover {
+         color: white;
+    }
+
+    .btn:active span::before {
+         background: #2751cd;
+    }
+
+    @media screen and (max-width: 445px){
+        .closeBtn__container{
+            transform: translate(27rem, 1rem);
+        }
+
+        .success {
+            height: 20rem;
+            width: 30rem;
+        }
+
+        .btn {
+            margin-top: 5px;
+        }
+
+        .flex__container {
+            font-size: 1.5rem;
+            transform: translateY(3rem);
+        }
+    }
+
+    @media screen and (max-width: 445px){
+        .closeBtn__container{
+            transform: translate(22rem, 1rem);
+        }
+        .success {
+            width: 25rem;
+        }
+    }

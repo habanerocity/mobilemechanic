@@ -1,0 +1,214 @@
+@import url("https://fonts.googleapis.com/css2?family=M+PLUS+1+Code&family=Roboto+Condensed&family=Russo+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins&family=Ubuntu&display=swap");
+.backdrop {
+  position: fixed;
+  /* Sit on top of the page content */
+  width: 100%;
+  /* Full width (cover the whole page) */
+  height: 100%;
+  /* Full height (cover the whole page) */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 3;
+  cursor: pointer;
+}
+
+.flex__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding: 10rem;
+}
+
+.flex__container > label {
+  -webkit-transform: translateX(-4.3rem);
+          transform: translateX(-4.3rem);
+}
+
+.flex__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+h3 {
+  text-align: left;
+  margin: 0;
+}
+
+.logo {
+  position: absolute;
+  -webkit-transform: translateY(-13rem);
+          transform: translateY(-13rem);
+  height: 18rem;
+  z-index: 6;
+}
+
+.logo__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  justify-content: center;
+}
+
+.modal__backdrop {
+  position: fixed;
+  width: 50%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 3;
+  border-radius: 6px 0 0 6px;
+}
+
+.modal__header {
+  position: absolute;
+  color: #fbfbfb;
+  -webkit-transform: translate(2rem, -50.5rem);
+          transform: translate(2rem, -50.5rem);
+  z-index: 4;
+  font-weight: bolder;
+}
+
+.modal__line {
+  position: absolute;
+  color: #fbfbfb;
+  -webkit-transform: translate(-8.4rem, -45rem);
+          transform: translate(-8.4rem, -45rem);
+  z-index: 4;
+  font-size: 1.3rem;
+}
+
+.modal__pic {
+  width: 40rem;
+  border-radius: 6px 0 0 6px;
+  height: 53rem;
+}
+
+.modal__window {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  position: fixed;
+  z-index: 900;
+  color: #1b1b1b;
+}
+
+.phone {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  color: #fbfbfb;
+  font-size: 1.5rem;
+  margin: 1.8rem 0;
+}
+
+.phone__container {
+  position: absolute;
+  padding: 6rem;
+  -webkit-transform: translate(-4rem, -44.2rem);
+          transform: translate(-4rem, -44.2rem);
+  z-index: 4;
+  margin-bottom: 4rem;
+}
+
+.phone__icon {
+  margin-right: 1rem;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 850px) {
+  .modal__branding {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 2560px) {
+  .logo {
+    -webkit-transform: translateY(-16rem);
+            transform: translateY(-16rem);
+    height: 24rem;
+  }
+  .modal__pic {
+    width: 60rem;
+    border-radius: 6px 0 0 6px;
+    height: 73rem;
+  }
+  .modal__header {
+    font-size: 5.5rem !important;
+    -webkit-transform: translate(2rem, -69.5rem);
+            transform: translate(2rem, -69.5rem);
+  }
+  .modal__line {
+    -webkit-transform: translate(-11.5rem, -62rem);
+            transform: translate(-11.5rem, -62rem);
+    font-size: 2.1rem;
+  }
+  .modal__backdrop {
+    width: 53%;
+  }
+  .phone__container {
+    -webkit-transform: translate(-4rem, -55.2rem);
+            transform: translate(-4rem, -55.2rem);
+  }
+}
+
+@media screen and (min-width: 1501px) {
+  .modal__line {
+    width: 70%;
+  }
+}
+/*# sourceMappingURL=ModalWindow.module.css.map */

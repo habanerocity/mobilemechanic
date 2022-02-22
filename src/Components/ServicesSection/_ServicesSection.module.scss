@@ -1,0 +1,175 @@
+@import "../../Sass/_mixins.scss";
+@import "../../Sass/_variables.scss";
+
+.btn__container {
+  @include flex-container;
+  margin-top: 8rem;
+}
+
+.classic {
+  height: 40rem;
+  width: 60rem;
+  position: relative;
+  box-shadow: 5px 3px 3px rgba(0, 0, 0, 20%);
+}
+
+.icon{
+  margin-right: 1rem;
+  height: 2rem;
+  width: 2rem;
+  &__checkEngine {
+    height: 2.2rem;
+  }
+  
+  &__brakes {
+    height:2.2rem;
+  }
+}
+
+.img__container {
+  @include flex-container;
+  & > * {
+    min-width: 20rem;
+    width: 60rem;
+    border-radius: 8px;
+    margin: 3rem 0;
+  }
+}
+
+.parent_flex__container {
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: 2rem 0;
+  flex-wrap: wrap;
+}
+
+.phone__icon {
+  margin-right: 5px;
+  height: 2rem;
+  width: 2rem;
+}
+
+.service {
+  list-style-type: none;
+  margin: 1rem 0;
+}
+
+.services {
+  font-size: 4rem;
+  text-align: center;
+  font-family: $header-font;
+
+  &__container {
+    display: block;
+    position: relative;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 2rem;
+    text-align: left;
+  
+  }
+
+  &__section{
+    padding: $padding-section;
+    background-color: $color-white-1;
+  }
+}
+
+ul {
+  padding-left: 0 !important;
+}
+
+@media screen and (min-width: 2560px) {
+  .services__container {
+    font-size: 3rem;
+  }
+
+  .phone__icon {
+    height: 3rem;
+    width: 3rem;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .btn {
+    font-size: 1.5rem;
+
+    &__container {
+      padding: 6rem;
+      margin-top: 6rem;
+    }
+  }
+
+  .services__section {
+    padding: $padding-section-md;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .btn {
+    font-size: 1.5rem;
+
+    &__container {
+      padding: 0;
+    }
+  }
+
+  .services__section {
+    padding: $padding-section-sm;
+  }
+}
+
+@media screen and (max-width: 600px) {
+   .btn__container {
+    margin-top: 2rem;
+  }
+
+  .classic  {
+    width: 30rem;
+    height: 20rem;
+   }
+
+  .services__section {
+    padding: 4rem 0;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .btn {
+    font-size: 1.2rem;
+    padding: 0.5rem;
+    margin-top: 0.3rem;
+    padding: 9px 4rem;
+  }
+
+  .classic  {
+    width: 30rem;
+    height: 22rem;
+   }
+
+  .services__container  {
+    display: inline;
+   }
+}
+
+@media only screen and (max-width: 390px) {
+  .classic {
+    height: 23rem;
+    width: 30rem;
+    position: relative;
+  }
+
+  .parent_flex__container {
+    margin: 0;
+  }
+}
+
+
+@media only screen and (max-width: 300px) {
+  .classic {
+    height: 18rem;
+    width: 24rem;
+  }
+}

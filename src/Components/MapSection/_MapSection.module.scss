@@ -1,0 +1,107 @@
+@import '../../Sass/variables';
+@import '../../Sass/mixins';
+
+.header {
+	font-familY: $header-font;
+}
+
+.main__container {
+	height: 80%;
+	width: 100%;
+	margin-bottom: $margin-md;
+	padding: 8rem 0;
+}
+
+.map {
+	height: 70rem;
+	width: 100rem;
+	position: relative;
+	@include flex-container;
+}
+
+.mapsection__holder {
+	height: 100%;
+	@include flex-container;
+	flex-direction: column;
+	position: relative;
+}
+
+.servicearea {
+	text-align: center;
+	margin: $margin-lg 0;
+	& > h1 {
+		font-size: 4rem;
+	}
+}
+
+@media only screen and (min-width: 2560px) {
+	.servicearea {
+		text-align: center;
+		& > h1 {
+			font-size: 7rem;
+		}
+	}
+}
+
+
+@media only screen and (max-width: 1000px) {
+	.map{
+		width: 80rem;
+		height: 50rem;
+	}
+
+	.servicearea {
+		& > h1 {
+			font-size: 3.5rem;
+		}
+	}
+	}
+
+	@media only screen and (max-width: 900px){
+		.main__container {
+			height: 80%;
+			width: 100%;
+			margin-bottom: $margin-md;
+			padding: 7rem 0;
+		}
+	}
+
+
+@media only screen and (max-width: 800px) {
+	.map{
+		width: 50rem;
+		height: 40rem;
+	}
+	}
+
+@media only screen and (max-width: 550px) {
+		.map{
+			width: 60rem;
+			height: 24rem;
+		}
+
+		.main__container {
+			margin-bottom: $margin-md;
+			padding: 4rem 0;
+		}
+		}
+
+		@media only screen and (max-width: 450px){
+			.main__container {
+				margin-bottom: 10rem;
+				padding:0;
+			}
+		}
+
+
+@media only screen and (min-height: 700px){
+	.main__container {
+		padding: 8rem 0;
+	}
+
+	.servicearea {
+		& > h1 {
+			transform: translateY(-4rem);
+		}
+	}
+} 

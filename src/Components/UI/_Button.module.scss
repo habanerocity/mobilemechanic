@@ -1,0 +1,58 @@
+.btn {
+  background-color: #247ba0;
+  color: #fff;
+  font-size: 2rem;
+  padding: 5px 4rem;
+  position: relative;
+  display: inline-block;
+  border-radius: 5rem;
+  text-decoration: none;
+  letter-spacing: 0.025em;
+  font-weight: 600;
+  cursor: pointer;
+  min-width: 8.8rem;
+  width: 30rem;
+  border: none;
+  margin-top: 0.5rem;
+
+  &:hover {
+    background-color: #175873;
+  }
+}
+
+button:disabled,
+button:disabled:hover,
+button:disabled:active {
+  background-color: #ccc;
+  color: #292929;
+  border-color: #ccc;
+  cursor: not-allowed;
+}
+
+@media screen and (min-width: 2560px) {
+  .btn {
+    width: 127rem;
+    font-size: 3rem;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .btn {
+    font-size: 1.5rem;
+    padding: 9px 4rem;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .btn {
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .btn {
+    font-size: 1.2rem;
+    margin-top: 0.1rem;
+    width: 25rem;
+  }
+}

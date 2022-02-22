@@ -1,0 +1,349 @@
+@import '../../Sass/mixins';
+@import '../../Sass/variables';
+
+
+.getstarted {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-column-gap: 2rem;
+    height: 200vh;
+}
+
+.btn__container {
+    @include flex-container;
+    margin-top: $margin-md;
+}
+
+.grid__container {
+    padding: $padding-section;
+}
+
+.header {
+    text-align: center;
+    font-size: 4rem;
+}
+
+.no {
+    height: 4rem;
+    width: 4rem;
+    margin-right:2rem;
+}
+
+.a {
+   @include flex-container;
+   & > p {
+       font-size: 1.5rem;
+   }
+}
+
+.b {
+    @include flex-container;
+    & > img {
+        height: 30rem;
+        width: auto;
+    }
+}
+
+.c {
+    @include flex-container;
+    & > img {
+        height: 30rem;
+        width: auto;
+    }
+}
+
+.d {
+    @include flex-container;
+    & > p {
+        font-size: 1.5rem;
+    }
+}
+
+.e {
+     @include flex-container;
+    & > p {
+        font-size: 1.5rem;
+    }
+}
+
+.f {
+    @include flex-container;
+    & > img {
+        height: 30rem;
+        width: 40rem;
+    }
+}
+
+.fa-circle {
+    height: 30rem;
+    color: $color-black;
+}
+
+.header {
+    font-family: $header-font;
+}
+
+/////////////////////////////////////////
+
+@media screen and (min-width: 2560px) {
+    .header {
+        font-size: 7rem;
+    }
+
+    .btn {
+        width: 127rem;
+    }
+
+    p {
+        font-size: 2rem;
+    }
+
+    .a {
+        @include flex-container;
+        & > p {
+            font-size: 2.3rem;
+        }
+     }
+
+    .b > img {
+        height: 45rem;
+    }
+
+    .c > img {
+        height: 35rem;
+    }
+
+    .d {
+        @include flex-container;
+        & > p {
+            font-size: 2.3rem;
+        }
+     }
+
+     .e {
+        @include flex-container;
+        & > p {
+            font-size: 2.3rem;
+        }
+     }
+
+    .f > img {
+        height: 32rem;
+    }
+
+    .no {
+        height: 7rem;
+        width: 7rem;
+    }
+}
+
+@media screen and (max-width: 1500px){
+    p {
+        width: 70%;
+    }
+}
+
+
+@media screen and (max-width: 1100px){
+
+    .grid__container {
+        margin-top: 6rem;
+    }
+    
+    .getstarted{
+        display: flex;
+        flex-direction: column;
+        height: 80rem;
+    }
+    .a {
+        & > p {
+            font-size: 1.5rem;
+            padding-bottom: 3rem;
+        }
+     }
+
+    .b {
+        display: none;
+    }
+
+    .c {
+        display: none;
+    }
+
+    .d {
+        & > p {
+            font-size: 1.5rem;
+            padding-bottom: 3rem;
+        }
+     }
+
+     .e {
+        & > p {
+            font-size: 1.5rem;
+            padding-bottom: 3rem;
+        }
+     }
+
+     .f {
+        & > img {
+            margin-top: 10rem;
+        }
+     }
+
+     .header {
+         padding-bottom: 7rem;
+     }
+}
+
+@media screen and (max-width: 1200px){
+    .grid__container {
+        padding: $padding-section-md;
+        margin-top: 0;
+    }
+
+    .btn__container{
+        margin-top: 2rem;
+    }
+}
+
+@media screen and (max-width: 900px){
+    .grid__container {
+        padding: $padding-section-sm;
+    }
+
+    .f {
+        & > img {
+            margin-top: 7rem;
+        }
+     }
+
+     .no {
+        height: 3rem;
+        width: 3rem;
+     }
+}
+
+@media screen and (max-width: 550px) {
+    .getstarted{
+        display: flex;
+        flex-direction: column;
+        height: 70rem;
+    }
+
+    .f {
+        & > img {
+            margin-top: 4rem;
+        }
+     }
+
+     .header {
+        padding-bottom: 5rem;
+    }
+
+    .no {
+        height: 2rem;
+        width: 2rem;
+    }
+}
+
+@media screen and (max-width: 550px){
+    .f {
+        & > img {
+            margin-top: 0;
+            width: 23rem;
+        }
+     }
+}
+
+///////BUTTON STYLES///////
+
+.btn {
+    background-color: #247ba0;
+    color: #fff;
+    font-size: 2rem;
+    padding: 5px 4rem;
+    position: relative;
+    display: inline-block;
+    border-radius: 5rem;
+    text-decoration: none;
+    letter-spacing: 0.025em;
+    font-weight: 600;
+    min-width: 8.8rem;
+    width: 30rem;
+    border: none;
+    margin-top: 0.75rem;
+  
+    &:hover {
+      background-color: #175873;
+    }
+  }
+  @media screen and (max-width: 1200px) {
+    .btn {
+      font-size: 1.5rem
+    }
+  }
+  
+  @media screen and (max-width: 900px) {
+    .btn {
+      font-size: 1.5rem
+    }
+  }
+  
+  @media screen and (max-width: 500px) {
+    .btn {
+      font-size: 1rem;
+      padding: 0.5rem;
+      margin-top: 0.3rem;
+    }
+  }
+  
+  @media only screen and (max-width: 576px) {
+    .parent_flex__container {
+      display: block;
+    }
+  }
+  
+  @media only screen and (max-width: 390px) {
+    .parent_flex__container {
+      margin: 0;
+    }
+  }
+
+@media screen and (max-width: 600px) {
+    .f {
+        & > img {
+            height: 20rem;
+        }
+     }
+}
+
+@media screen and (max-width: 500px) {
+    .f {
+        & > img {
+            height: 15rem;
+        }
+     }
+}
+
+@media screen and (max-width: 400px){
+   .header {
+       font-size: 2.2rem;
+   }
+
+   .no {
+       font-size: 3rem;
+   }
+}
+
+@media screen and (max-width: 330px){ 
+     .grid__container {
+         margin-top: 0;
+     }
+    }
+
+    @media screen and (max-width: 330px){ 
+        .btn__container {
+           margin-top: 7rem;
+        }
+       }

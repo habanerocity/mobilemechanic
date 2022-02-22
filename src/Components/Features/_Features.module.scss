@@ -1,0 +1,85 @@
+@import "../../Sass/variables";
+@import "../../Sass/mixins";
+
+.features {
+  display: flex;
+  position: relative;
+  justify-content: space-around;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: $padding-section;
+
+  &__card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.5rem;
+  }
+
+  &__container {
+    @include flex-container;
+    background-color: $color-gray;
+  }
+  
+  &__icons {
+    height: 5rem;
+    width: 7rem;
+    margin-bottom: 2rem;
+  }
+  
+  &__text {
+    padding: 0 1.5rem;
+  }
+}
+
+.findOut {
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-weight: 600;
+  background-color: $color-secondary-1;
+  color: $color-black;
+  border-radius: 3px;
+  margin: 2rem 0;
+  padding: 0 2rem;
+  border: none;
+
+  &:hover {
+    background-color: $color-secondary-2;
+  }
+}
+
+// #gear {
+//   margin-bottom: 1rem;
+// }
+
+.header {
+  text-align: center;
+  font-weight: bolder;
+  overflow: hidden;
+white-space: nowrap;
+}
+
+@media screen and (max-width: 1200px) {
+  .features {
+    padding: $padding-section-md;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .features {
+    padding: $padding-section-sm;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .features__text {
+    width: 30rem;
+  }
+}
+
+@media only screen and (max-width: 300px) {
+  .features__text {
+    width: 23rem;
+  }
+}

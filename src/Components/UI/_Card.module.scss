@@ -1,0 +1,33 @@
+@import '../../Sass/mixins';
+
+.card {
+    height: auto;
+    border-radius: 5px;
+    padding: 2.5rem;
+    width: 30%;
+    background-color: #dee2e6;
+    @include flex-container-col;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5rem;
+    box-shadow: 5px 3px 3px rgba(0, 0, 0, 20%);
+}
+
+@media screen and (max-width: 1000px) {
+    .card {
+        width: 54%;
+        display:block;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .card {
+        width: 30rem;
+    }
+}
+
+@media screen and (max-width: 300px) {
+    .card {
+        width: 24rem;
+    }
+}
