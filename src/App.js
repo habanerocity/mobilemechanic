@@ -10,7 +10,11 @@ import GetStartedSection from './Components/GetStartedSection/GetStartedSection'
 import Banner from './Components/Footer/Banner';
 import Footer from './Components/Footer/Footer';
 
+// import LoadingSpinner from './Components/UI/LoadingSpinner';
+
 import BtnContext from './store/btn-context';
+
+// const ServicesSection = React.lazy(() => import('./Components/ServicesSection/ServicesSection'));
 
 function App() {
 	const [ getQuote, setGetQuote ] = useState(false);
@@ -26,7 +30,9 @@ function App() {
 				<Features onConfirm={setGetQuote} />
 				<SliderSection />
 				<GetStartedSection onConfirm={setGetQuote} />
+				{/* <Suspense fallback={LoadingSpinner}> */}
 				<ServicesSection />
+				{/* </Suspense> */}
 				<MapSection />
 				<Banner onConfirm={setGetQuote} />
 			</BtnContext.Provider>
