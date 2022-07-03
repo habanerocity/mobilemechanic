@@ -9,7 +9,7 @@ import MenuItems from './MenuItems';
 import { Link } from 'react-scroll';
 
 const NavBar = () => {
-	const [ clicked, setAsClicked ] = useState(false);
+	const [clicked, setAsClicked] = useState(false);
 
 	const toggle = (previous) => !previous;
 
@@ -37,6 +37,7 @@ const NavBar = () => {
 							activeClass="active"
 							to={item.scrollTo}
 							spy={true}
+							onClick={handleClick}
 							smooth={true}
 							offset={0}
 							duration={500}

@@ -15,6 +15,7 @@
 .map {
 	height: 70rem;
 	width: 100rem;
+	border-radius: 5rem;
 	position: relative;
 	@include flex-container;
 }
@@ -74,10 +75,16 @@
 	}
 	}
 
-@media only screen and (max-width: 550px) {
+	@media only screen and (max-width: 550px) {
 		.map{
-			width: 60rem;
-			height: 24rem;
+			width: 30rem;
+			height: 30rem;
+		}
+	}
+@media only screen and (max-width: 450px) {
+		.map{
+			width: 25rem;
+			height: 25rem;
 		}
 
 		.main__container {

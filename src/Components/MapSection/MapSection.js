@@ -45,9 +45,6 @@ const MapSection = () => {
 								strokeOpacity: 1,
 								strokeWeight: 1
 							}}
-							onClick={() => {
-								console.log("ahmet")
-							}}
 						/>
 					</GoogleMap> : <div>Loading...</div>}
 				</div>
