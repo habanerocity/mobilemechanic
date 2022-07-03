@@ -16,7 +16,7 @@ const Header = (props) => {
 	};
 
 	return (
-		<div id="home">
+		<div className={styles.home} id="home">
 			{ctx && <ModalWindow onConfirm={handleClose} />}
 			<Hero />
 			<div className={styles.btn__container}>
