@@ -11,22 +11,22 @@ import computer from '../../Images/data_processing.svg';
 import booking from '../../Images/booking.svg';
 import navigator from '../../Images/navigator.svg';
 
-import Aos from 'aos';
-import 'aos/dist/aos.css';
+// import Aos from 'aos';
+// import 'aos/dist/aos.css';
 
 const GetStartedSection = (props) => {
-	const [ clicked, setClicked ] = useState(false);
+	const [clicked, setClicked] = useState(false);
 
 	const clickHandler = () => {
 		setClicked(true);
 		props.onConfirm(clicked);
 	};
 
-	useEffect(() => {
-		Aos.init({
-			duration: 2000
-		});
-	}, []);
+	// useEffect(() => {
+	// 	Aos.init({
+	// 		duration: 2000
+	// 	});
+	// }, []);
 
 	const { onConfirm } = props;
 
@@ -35,7 +35,7 @@ const GetStartedSection = (props) => {
 			//lifting state up
 			onConfirm(clicked);
 		},
-		[ clicked, onConfirm ]
+		[clicked, onConfirm]
 	);
 
 	return (
@@ -43,9 +43,9 @@ const GetStartedSection = (props) => {
 			<h1 className={styles.header}>Getting Started is Simple</h1>
 			<div className={`container ${styles.getstarted}`}>
 				<div
-					data-aos="fade-up"
-					data-aos-easing="linear"
-					data-aos-duration={1300}
+					// data-aos="fade-up"
+					// data-aos-easing="linear"
+					// data-aos-duration={1300}
 					className={`container ${styles.a}`}
 				>
 					<div>
@@ -59,22 +59,25 @@ const GetStartedSection = (props) => {
 					</p>
 				</div>
 				<div
-					data-aos="fade-left"
-					data-aos-offset={500}
-					data-aos-duration={1700}
+					// data-aos="fade-left"
+					// data-aos-offset={500}
+					// data-aos-duration={1700}
 					className={`container ${styles.b}`}
 				>
 					<img src={computer} alt="computer" />
 				</div>
 				<div
-					data-aos="fade-right"
-					data-aos-duration={1700}
-					data-aos-offset={500}
+					// data-aos="fade-right"
+					// data-aos-duration={1700}
+					// data-aos-offset={500}
 					className={`container ${styles.c}`}
 				>
 					<img src={booking} alt="booking" />
 				</div>
-				<div data-aos="fade-left" data-aos-duration={1000} className={`container ${styles.d}`}>
+				<div
+					// data-aos="fade-left"
+					// data-aos-duration={1000}
+					className={`container ${styles.d}`}>
 					<div>
 						<img src={numberTwo} alt="two" className={styles.no} />
 					</div>
@@ -84,7 +87,10 @@ const GetStartedSection = (props) => {
 						Send us your location, when you're available and wait for us there.
 					</p>
 				</div>
-				<div data-aos="fade-up" data-aos-duration={1700} className={`container ${styles.e}`}>
+				<div
+					// data-aos="fade-up"
+					//  data-aos-duration={1700}
+					className={`container ${styles.e}`}>
 					<div>
 						<img src={numberThree} alt="three" className={styles.no} />
 					</div>
@@ -95,9 +101,9 @@ const GetStartedSection = (props) => {
 					</p>
 				</div>
 				<div
-					data-aos="fade-down"
-					data-aos-offset={300}
-					data-aos-duration={1700}
+					// data-aos="fade-down"
+					// data-aos-offset={300}
+					// data-aos-duration={1700}
 					className={`container ${styles.f}`}
 				>
 					<img src={navigator} alt="driver" />

@@ -4,11 +4,11 @@ import help from '../../Icons/GI/home-garage (1).svg';
 import odometer from '../../Icons/GI/speedometer (1).svg';
 import autoRepair from '../../Icons/GI/auto-repair (1).svg';
 
-import Aos from 'aos';
-import 'aos/dist/aos.css';
+// import Aos from 'aos';
+// import 'aos/dist/aos.css';
 
 const FirstSection = (props) => {
-	const [ clicked, setClicked ] = useState(false);
+	const [clicked, setClicked] = useState(false);
 
 	const clickHandler = () => {
 		setClicked(true);
@@ -22,15 +22,17 @@ const FirstSection = (props) => {
 			//lifting state up
 			onConfirm(clicked);
 		},
-		[ clicked, onConfirm ]
+		[clicked, onConfirm]
 	);
 
-	useEffect(() => {
-		Aos.init({ duration: 2000 });
-	}, []);
+	// useEffect(() => {
+	// 	Aos.init({ duration: 2000 });
+	// }, []);
 
 	return (
-		<div data-aos="fade-up" className={styles.firstsection} id="features">
+		<div
+			// data-aos="fade-up" 
+			className={styles.firstsection} id="features">
 			<section className={`container ${styles.features__container}`}>
 				<div className={styles.features}>
 					<div className={`${styles.features__card} col-lg-4 col-md-12 col-sm-12`}>
