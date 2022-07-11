@@ -26,12 +26,12 @@ function App() {
   return (
     <div className={styles.app}>
       <BtnContext.Provider value={getQuote}>
-        <Header onClose={handleClose} />
+        <Header onClose={handleClose} onConfirm={setGetQuote} />
         <Features onConfirm={setGetQuote} />
         <SliderSection />
         <GetStartedSection onConfirm={setGetQuote} />
         {/* <Suspense fallback={LoadingSpinner}> */}
-        <ServicesSection />
+        <ServicesSection onConfirm={setGetQuote} />
         {/* </Suspense> */}
         <MapSection />
         <Banner onConfirm={setGetQuote} />

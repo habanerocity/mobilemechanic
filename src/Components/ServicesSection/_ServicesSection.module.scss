@@ -4,6 +4,7 @@
 .btn__container {
   @include flex-container;
   margin-top: 8rem;
+  // transform: translateY(-3rem);
 }
 
 .classic {
@@ -99,11 +100,21 @@ ul {
     &__container {
       padding: 6rem;
       margin-top: 6rem;
+      transform: translateY(3rem);
     }
   }
 
   .services__section {
     padding: $padding-section-md;
+  }
+}
+
+@media screen and (max-width: 1050px) {
+  .btn {
+    &__container {
+   
+      transform: translateY(6rem);
+    }
   }
 }
 
@@ -113,6 +124,7 @@ ul {
 
     &__container {
       padding: 0;
+      transform: translateY(-3rem);
     }
   }
 
@@ -121,9 +133,19 @@ ul {
   }
 }
 
+@media screen and (max-width: 800px) {
+  .btn {
+    &__container {
+   
+      transform: translateY(0);
+    }
+  }
+}
+
 @media screen and (max-width: 600px) {
    .btn__container {
     margin-top: 2rem;
+    transform: translateY(3rem);
   }
 
   .classic  {
@@ -132,7 +154,7 @@ ul {
    }
 
   .services__section {
-    padding: 4rem 0;
+    padding: 6rem 0;
   }
 }
 
@@ -152,6 +174,8 @@ ul {
   .services__container  {
     display: inline;
    }
+
+
 }
 
 @media only screen and (max-width: 390px) {

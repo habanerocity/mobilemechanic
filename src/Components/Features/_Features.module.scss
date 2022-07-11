@@ -16,11 +16,6 @@
     align-items: center;
     font-size: 1.5rem;
   }
-
-  &__container {
-    @include flex-container;
-    background-color: $color-gray;
-  }
   
   &__icons {
     height: 5rem;
@@ -49,9 +44,9 @@
   }
 }
 
-// #gear {
-//   margin-bottom: 1rem;
-// }
+.firstsection {
+  background-color: #f3f3f3;
+}
 
 .header {
   text-align: center;

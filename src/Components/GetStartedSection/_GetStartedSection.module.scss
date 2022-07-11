@@ -16,6 +16,7 @@
 
 .grid__container {
     padding: $padding-section;
+    background-color: #f3f3f3;
 }
 
 .header {
@@ -326,9 +327,9 @@
 }
 
 @media screen and (max-width: 400px){
-   .header {
-       font-size: 2.2rem;
-   }
+//    .header {
+//        font-size: 2.2rem;
+//    }
 
    .no {
        font-size: 3rem;

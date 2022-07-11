@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import tekton from '../../Images/tekton.webp';
 import styles from './_ServicesSection.module.scss';
 import Button from '../UI/Button';
@@ -20,11 +20,38 @@ import adjustments from '../../Icons/FA/sliders-h-solid.svg';
 import air from '../../Icons/FA/wind-solid.svg';
 import problem from '../../Icons/FA/exclamation-triangle-solid.svg';
 
-const ServicesSection = () => {
+const ServicesSection = (props) => {
+	const [clicked, setClicked] = useState(false);
+
+	const clickHandler = () => {
+		setClicked(true);
+		props.onConfirm(clicked);
+	};
+
+	useEffect(
+		() => {
+			//lifting state up
+			props.onConfirm(clicked);
+		},
+		[clicked]
+	);
+
+	const [width, setWidth] = React.useState(window.innerWidth);
+	const breakPoint = 480;
+
+	useEffect(() => {
+		const handleWindowResize = () => setWidth(window.innerWidth);
+		window.addEventListener("resize", handleWindowResize);
+
+		return () => window.removeEventListener("resize", handleWindowResize);
+	}, []);
+
 	return (
-		<div className={styles.services__section} id="services">
-			<section className={`container ${styles.services__container} ${styles.main__container}`}>
-				<h1 className={styles.services}>Services Offered</h1>
+		<section className={styles.services__section} id="services">
+			<div className="container"><h1 className={styles.services}>Services Offered</h1></div>
+
+			<div className={`container ${styles.services__container} ${styles.main__container}`}>
+
 				<div className={styles.img__container}>
 					<img src={tekton} className={styles.classic} alt="classic car" />
 				</div>
@@ -149,14 +176,18 @@ const ServicesSection = () => {
 					</Card>
 				</div>
 				<div className={styles.btn__container}>
-					<a href="tel:6266967486">
-						<Button className={styles.btn}>
-							<img src={phone} alt="phone" className={styles.phone__icon} />Call Now
-						</Button>
-					</a>
+					{width > breakPoint ? <Button onConfirm={clickHandler} className={styles.btn}> Get Quote </Button> :
+						<div>
+							<a href="tel:6266967486">
+								<Button className={styles.btn}>
+									<img src={phone} alt="phone" className={styles.phone__icon} />Call Now
+								</Button>
+							</a>
+						</div>
+					}
 				</div>
-			</section>
-		</div>
+			</div>
+		</section>
 	);
 };
 

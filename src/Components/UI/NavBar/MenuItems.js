@@ -7,7 +7,7 @@ const MenuItems = [
 	},
 	{
 		title: 'Features',
-		scrollTo: 'features',
+		scrollTo: 'features__section',
 		url: '#',
 		cName: 'nav-links'
 	},

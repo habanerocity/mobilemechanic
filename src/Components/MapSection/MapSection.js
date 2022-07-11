@@ -1,6 +1,6 @@
 import React, { useMemo } from 'react';
 import styles from './_MapSection.module.scss';
-import { GoogleMap, useJsApiLoader, Marker, Polygon } from '@react-google-maps/api';
+import { GoogleMap, useJsApiLoader, Polygon } from '@react-google-maps/api';
 
 const MapSection = () => {
 
@@ -27,14 +27,14 @@ const MapSection = () => {
 	const center = useMemo(() => ({ lat: 34.2096443, lng: -118.4918335 }), []);
 
 	return (
-		<section id="about" className={`container ${styles.main__container}`}>
-			<div className={styles.mapsection__holder}>
-				<div className={styles.servicearea}>
-					<h1 className={styles.header}>We Service the San Fernando Valley in Los Angeles, CA </h1>
+		<section id="about" className={`${styles.main__container}`}>
+			<div className={`container ${styles.mapsection__holder}`}>
+				<div>
+					<h1 className={styles.header}>I Service the San Fernando Valley in Los Angeles, CA </h1>
 				</div>
 				<div className={styles.map}>
 					{isLoaded ? <GoogleMap paths={latlngs} mapContainerStyle={containerStyle} rel="preconnect" crossOrigin="true" center={center} zoom={10}  >
-						<Marker position={center} />
+						{/* <Marker position={center} /> */}
 						<Polygon
 							path={latlngs}
 							key={1}

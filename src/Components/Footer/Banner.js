@@ -2,8 +2,6 @@ import React, { useState, useEffect } from 'react';
 import styles from './_Banner.module.scss';
 
 import location from '../../Icons/GI/position-marker.svg';
-// import Aos from 'aos';
-// import 'aos/dist/aos.css';
 
 const Banner = (props) => {
 	const [clicked, setClicked] = useState(false);
@@ -23,14 +21,8 @@ const Banner = (props) => {
 		[clicked, onConfirm]
 	);
 
-	// useEffect(() => {
-	// 	Aos.init({ duration: 2000 });
-	// }, []);
-
 	return (
-		<section
-			// data-aos="fade-up"
-			id="contact" className={styles.wrapper}>
+		<section id="contact" className={styles.wrapper}>
 			<div className={`${styles.banner} container`}>
 				<div className={styles.quote}>Ready for a Quote?</div>
 				<div className={styles.line}>Service is available 7 days a week:</div>
