@@ -83,8 +83,13 @@ ul {
 }
 
 @media screen and (min-width: 2560px) {
-  .services__container {
-    font-size: 3rem;
+
+  .services {
+    font-size: 7rem;
+
+    &__container {
+      font-size: 3rem;
+    }
   }
 
   .phone__icon {

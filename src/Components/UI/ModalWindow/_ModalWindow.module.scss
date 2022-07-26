@@ -168,10 +168,19 @@ h3 {
 }
 
 
+
 @media screen and (min-width: 1501px){
     .modal__line {
         width: 70%;
     }
 }
 
+
+
+@media screen and (max-width: 901px){
+    .modal__line {
+        width: 70%;
+        // transform: translate(-9.4rem,-45rem);
+    }
+}
 

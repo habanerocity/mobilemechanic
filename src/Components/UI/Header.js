@@ -27,7 +27,7 @@ const Header = (props) => {
 			//lifting state up
 			props.onConfirm(clicked);
 		},
-		[clicked]
+		[props, clicked]
 	);
 
 	const breakPoint = 550;

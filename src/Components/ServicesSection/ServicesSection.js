@@ -33,7 +33,7 @@ const ServicesSection = (props) => {
 			//lifting state up
 			props.onConfirm(clicked);
 		},
-		[clicked]
+		[clicked, props]
 	);
 
 	const [width, setWidth] = React.useState(window.innerWidth);

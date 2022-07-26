@@ -9,7 +9,7 @@ const Hero = () => {
 			<div className={styles.hero__header}>
 				<h1 className={styles.header}>35+ Years of Automotive Excellence Right at Your Doorstep</h1>
 				<p className={styles.subtext}>
-					Get auto solutions straight to your doorstep or office at a fair and affordable price
+					San Fernando Valley Mobile Mechanic
 				</p>
 			</div>
 		</div>

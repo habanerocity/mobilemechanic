@@ -67,6 +67,7 @@ footer {
     &ut__error{
         line-height: 2rem;
         border: none;
+        border-radius: 0 !important;
         background-color: transparent;
         border-bottom: 1px solid #ff160c;
         padding: .75rem;
@@ -77,6 +78,7 @@ footer {
     &ut__success {
         line-height: 2rem;
         border: none;
+        border-radius: 0 !important;
         background-color: transparent;
         border-bottom: 1px solid #32cd32;
         padding: .75rem;
