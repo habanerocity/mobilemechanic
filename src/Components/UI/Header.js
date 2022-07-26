@@ -22,12 +22,15 @@ const Header = (props) => {
 		props.onConfirm(clicked);
 	};
 
+	const { onConfirm } = props;
+
+
 	useEffect(
 		() => {
 			//lifting state up
-			props.onConfirm(clicked);
+			onConfirm(clicked);
 		},
-		[props, clicked]
+		[clicked, onConfirm]
 	);
 
 	const breakPoint = 550;
@@ -44,11 +47,12 @@ const Header = (props) => {
 			{ctx && <ModalWindow onConfirm={handleClose} />}
 			<Hero />
 			<div className={styles.btn__container}>
+				{/* depending on viewport width, either render get quote button or call now button */}
 				{width > breakPoint ? <Button onConfirm={clickHandler} className={styles.btn}> Get Quote </Button> :
 					<div>
 						<a href="tel:6266967486">
 							<Button className={styles.btn}>
-								<img src={phone} alt="phone" className={styles.phone__icon} />Call Now
+								<img src={phone} alt="phone" className={styles.phone__icon} /> Call Now
 							</Button>
 						</a>
 					</div>

@@ -28,12 +28,14 @@ const ServicesSection = (props) => {
 		props.onConfirm(clicked);
 	};
 
+	const { onConfirm } = props;
+
 	useEffect(
 		() => {
 			//lifting state up
-			props.onConfirm(clicked);
+			onConfirm(clicked);
 		},
-		[clicked, props]
+		[clicked, onConfirm]
 	);
 
 	const [width, setWidth] = React.useState(window.innerWidth);

@@ -30,7 +30,7 @@ const GetStartedSection = (props) => {
 			//lifting state up
 			onConfirm(clicked);
 		},
-		[clicked, onConfirm]
+		[onConfirm, clicked]
 	);
 
 	const stepOneRef = useRef(null);
