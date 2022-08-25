@@ -111,6 +111,18 @@
     }
 }
 
+@media only screen and (min-width: 1900px) {
+    .arrow {
+        &__left{
+            left: -11rem;
+        }
+
+        &__right{
+            right: -11rem;
+        }
+    }
+}
+
 @media only screen and (min-width: 1450px) {
 .testemonial {
     font-size: 2.5rem;

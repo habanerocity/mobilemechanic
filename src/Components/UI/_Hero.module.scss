@@ -32,15 +32,15 @@
 
 ////MEDIA QUERIES BASED ON WIDTH ////////
 
-@media screen and (max-width: 2400px) {
-  .header {
-    font-size: 10rem ;
-  }
-}
+// @media screen and (max-width: 2400px) {
+//   .header {
+//     font-size: 10rem ;
+//   }
+// }
 
-@media screen and (max-width: 1900px) {
+@media screen and (min-width: 1900px) {
   .header {
-    font-size: 8rem ;
+    font-size: 7rem ;
   }
 }
 

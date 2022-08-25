@@ -71,23 +71,17 @@
 }
 
 ////MEDIA QUERIES BASED ON WIDTH ///////////////////////
-@media screen and (min-width: 1800px) {
+@media screen and (min-width: 1900px) {
     .line {
-        font-size: 5.5rem;
+        font-size: 3.5rem;
     }
 
     .details {
-        font-size: 5.5rem;
+        font-size: 3.5rem;
     }
 
     .quote {
-        font-size: 7rem;
-    }
-
-    .btn {
-    height: 8rem;
-    width: 61rem;
-    font-size: 4rem;
+        font-size: 4rem;
     }
 }
 
