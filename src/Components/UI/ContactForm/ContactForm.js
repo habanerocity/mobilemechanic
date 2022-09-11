@@ -131,10 +131,10 @@ const ContactForm = props => {
 
     emailjs
       .sendForm(
-        "service_wuh0tvq",
-        "template_5txpjlx",
+        "service_7ygro38",
+        "template_u49xesf",
         form.current,
-        "user_HKI5D9N8lHg0OrMzAbpUM"
+        "mL8qYhSyVWCZnrgMV"
       )
       .then(
         result => {
