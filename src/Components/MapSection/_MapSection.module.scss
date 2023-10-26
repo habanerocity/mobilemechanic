@@ -5,11 +5,11 @@
 	font-familY: $header-font;
 	text-align: center;
 	font-size: 4rem;
-	margin-bottom: 1rem;
+	margin-bottom: 3rem;
 }
 
 .main__container {
-	height: 100vh;
+	// height: 100vh;
 	// width: 100%;
 	padding:$padding-section;
 	background-color: #f3f3f3;
@@ -24,17 +24,19 @@
 .map {
 	height: 40rem;
 	width: 40rem;
-	// width: 80%;
-	border-radius: 5rem;
 	position: relative;
-	// @include flex-container;
+
+	> * {
+		border-radius: 5px;
+	}
+	
 }
 
 .mapsection__holder {
 	height: 100%;
 	@include flex-container;
 	flex-direction: column;
-	justify-content: space-evenly;
+	// justify-content: space-evenly;
 	position: relative;
 }
 
@@ -70,7 +72,7 @@
 @media only screen and (max-width: 1030px) {
 	.map{
 		width: 80%;
-		height: 80%;
+		height: 30rem;
 	}
 
 	.servicearea {
@@ -91,12 +93,12 @@
 	}
 
 
-@media only screen and (max-width: 830px) {
-	.map{
-		width: 100%;
-		height: 100%;
-	}
-	}
+// @media only screen and (max-width: 830px) {
+// 	.map{
+// 		width: 100%;
+// 		height: 100%;
+// 	}
+// 	}
 
 	@media only screen and (max-width: 700px){
 		.main__container{
@@ -106,73 +108,43 @@
 
 	@media only screen and (max-width: 550px) {
 		.map{
-			// width: 30rem;
-			// height: 30rem;
 			width: 80%;
-		height: 100%;
+			// height: 30rem;
 		}
 
 		.main__container {
 			padding: 6rem 0;
 		}
 
-		.mapsection__holder {
-			justify-content: space-between;
-		   }
 	}
 @media only screen and (max-width: 450px) {
 		.map{
 			// width: 25rem;
 			// height: 25rem;
 			width: 80%;
-		height: 50%;
+		// height: 50%;
 		}
 
 		.servicearea {
 			margin: 2rem 0;
 	
-			// & > h1 {
-			// 	font-size: 2rem;
-			// }
 		}
 
-		
+	}
 
-		.main__container {
-			// margin-bottom: $margin-md;
-			// padding: 4rem 0;
-		}
-		}
 
-		@media only screen and (max-width: 450px){
-			.main__container {
-				// margin-bottom: 10rem;
-				// padding:0;
-			}
-		}
 
 
 @media only screen and (min-height: 700px){
-	.main__container {
-		// padding: 8rem 0;
-	}
+
 
 	.servicearea {
+		margin: 2rem 0;
 		& > h1 {
 			transform: translateY(-4rem);
 		}
 	}
 } 
-
-@media only screen and (min-height: 700px) {
-	.servicearea {
-		margin: 2rem 0;
-
-		// & > h1 {
-		// 	font-size: 2rem;
-		// }
-	}
-}
 
 @media only screen and (max-height: 450px) {
 	.main__container{

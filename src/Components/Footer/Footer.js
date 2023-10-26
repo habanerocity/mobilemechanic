@@ -6,7 +6,7 @@ const Footer = () => {
 	return (
 		<div className={styles.wrapper}>
 			<div className={`${styles.footer} container`}>
-				<div>
+				{/* <div>
 					<ul className={styles.content}>
 						<li>About</li>
 						<li>Contact Us</li>
@@ -14,12 +14,12 @@ const Footer = () => {
 						<li>Private Policy</li>
 						<li>Blog</li>
 					</ul>
-				</div>
+				</div> */}
 				<div>
 					<img src={logo} alt="logo" className={styles.logo} />
 				</div>
 				<div className={styles.flex__container}>
-					<p className={styles.copyright}> © 2021 Ramirez Mobile Mechanic All Rights Reserved</p>
+					<p className={styles.copyright}> © 2023 Ramirez Mobile Mechanic All Rights Reserved</p>
 					<a rel="preconnect" href="https://icons8.com/icon/1731/engine">
 						Engine icon by Icons8
 					</a>
