@@ -28,7 +28,7 @@
 
 .flex__container {
     @include flex-container-col;
-    justify-content: space-around;
+    justify-content: center;
     padding: 10rem;
 
     & > label {
